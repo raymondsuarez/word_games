@@ -1,0 +1,21 @@
+# FROM python:alpine3.12
+FROM centos:latest
+
+WORKDIR /word_games
+
+COPY ./word_games /word_games
+COPY ./word_games/templates /word_games/templates
+COPY ./word_games/static /word_games/static
+COPY ./word_games/static/css/ /word_games/static/css
+COPY ./word_games/static/js /word_games/static/js
+COPY ./word_games/static/js/vendor /word_games/static/js/vendor
+COPY ./word_games/bin /word_games/bin
+
+RUN ./word_games/bin/pip3 install -r ./word_games/requirements.txt
+
+EXPOSE 8003
+
+ENTRYPOINT ["python","./word_games/app.py"]
+
+# ENTRYPOINT ["./word_games/gunicorn","app:app","-w 2","-b 0.0.0.0:8003"]
+

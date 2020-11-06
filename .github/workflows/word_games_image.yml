@@ -26,6 +26,6 @@ jobs:
         run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
       # Runs a single command using the runners shell
       - name: docker build 
-        run: docker build -P -f word_games/Dockerfile.balena -t word_games/word_games:1.0.0
+        run: docker build -P -t word_games/word_games:1.0.0
 
 

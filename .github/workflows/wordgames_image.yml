@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions   
-name: word_games docker build
+name: wordgames docker build
 # Controls when the action will run. Triggers the workflow on push or pull request 
 # events but only for the main branch
 on:
@@ -28,6 +28,6 @@ jobs:
         
         # Runs a single command using the runners shell
       - name: docker build 
-        run: docker build -P -t word_games/word_games:1.0.0
+        run: docker build -P -t wordgames/wordgames:1.0.0
 
 

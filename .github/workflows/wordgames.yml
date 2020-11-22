@@ -20,10 +20,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: DockerLogin
-#        env: 
-#          DOCKER_USER: ${{ secrets.DOCKER_USER }}  
-#          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
-#        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
+      # env: 
+      # DOCKER_USER: ${{ secrets.DOCKER_USER }}  
+      # DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
+      # run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
        run: echo $PAT | docker login ghcr.io --username raymondsuarez --password-stdin
         
         # Runs a single command using the runners shell

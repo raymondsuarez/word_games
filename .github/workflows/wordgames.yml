@@ -19,15 +19,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: docker login
-        env: 
-          DOCKER_USER: ${{ secrets.DOCKER_USER }}  
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
-        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
-#       run: docker login 
+      - name: DockerLogin
+#        env: 
+#          DOCKER_USER: ${{ secrets.DOCKER_USER }}  
+#          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
+#        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
+       run: docker login 
         
         # Runs a single command using the runners shell
       - name: docker build 
-        run: docker build -P -t wordgames/wordgames:1.0.0
+        run: docker build -P -t wordgames/wordgames:test1
 
 

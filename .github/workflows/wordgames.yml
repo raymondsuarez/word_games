@@ -24,7 +24,8 @@ jobs:
       - name: DockerLogin
         run: echo $PAT | docker login ghcr.io --username raymondsuarez --password-stdin
         env:
-           PAT: ${{ secrets.PAT }}
+                     PAT: ${{ secrets.PAT }}  
+
       # DOCKER_USER: ${{ secrets.DOCKER_USER }}  
       # DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  :  
         

@@ -32,7 +32,9 @@ jobs:
 
         
       - name: DockerBuild 
-        run: docker build -t raymondsuarez/wordgames .
+        run: |
+          docker build -t raymondsuarez/wordgames .
+          docker tag raymondsuarez/wordgames:latest raymondsuarez/wordgames:$(git log -1 --pretty=%h)
 
       - name: DockerPush
         run: docker push ghcr.io/raymondsuarez/wordgames/wordgames

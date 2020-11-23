@@ -29,14 +29,10 @@ jobs:
 
       # DOCKER_USER: ${{ secrets.DOCKER_USER }}  
       # DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  :  
-        
- 
-     # Runs a single command using the runners shell
-      - name: EchoDebug2
-        run: echo "Starting 'docker build'"
+
         
       - name: DockerBuild 
-        run: docker build -t ghcr.io/raymondsuarez/wordgames/wordgames:test1
+        run: docker build ghcr.io/raymondsuarez/wordgames/wordgames:test1
 
       - name: DockerPush
         run: docker push ghcr.io/raymondsuarez/wordgames/wordgames:test1

@@ -8,7 +8,6 @@ COPY templates templates
 COPY static static
 COPY static/css static/css
 COPY static/js static/js
-COPY static/js/vendor static/js/vendor
 
 RUN apk add --update \
                 less \

@@ -33,7 +33,7 @@ jobs:
         
       - name: DockerBuild 
         run: |
-          docker build -t wordgames .
+          docker build -f build/Dockerfile -t wordgames .
           docker tag wordgames:latest ghcr.io/raymondsuarez/wordgames:v5
 
       - name: DockerPush

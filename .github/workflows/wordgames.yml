@@ -21,9 +21,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: EchoToken1
-        run: echo "Starting 'Docker login'"
         
       - name: DockerLogin
         run: echo $PAT | docker login ghcr.io --username raymondsuarez --password-stdin
@@ -38,7 +35,8 @@ jobs:
       - name: EchoDebug2
         run: echo "Starting 'docker build'"
         
-      - name: docker build 
-        run: docker build -P -t wordgames/wordgames:test1
+      - name: DockerBuild 
+        run: docker build -t ghcr.io/raymondsuarez/wordgames/wordgames:test1
 
-
+      - name: DockerPush
+        run: docker push ghcr.io/raymondsuarez/wordgames/wordgames:test1

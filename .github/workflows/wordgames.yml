@@ -34,7 +34,7 @@ jobs:
       - name: DockerBuild 
         run: |
           docker build -t raymondsuarez/wordgames .
-          docker tag raymond/wordgames:latest ghcr.io/raymondsuarez/wordgames/wordgames:v5
+          docker tag raymondsuarez/wordgames:latest ghcr.io/raymondsuarez/wordgames/wordgames:v5
 
       - name: DockerPush
         run: docker push ghcr.io/raymondsuarez/wordgames/wordgames

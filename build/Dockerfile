@@ -26,7 +26,7 @@ RUN [ ! -d /.balena/messages ] && mkdir -p /.balena/messages; echo $'Here are a 
 
 RUN install_packages py3-pip
 
-RUN pip install -r requirements.txt
+RUN pip install -r build/requirements.txt
 RUN echo $'#!/bin/bash\nbalena-info\nbusybox ln -sf /bin/busybox /bin/sh\n/bin/sh "$@"' > /bin/sh-shim \
 	&& chmod +x /bin/sh-shim \
 	&& ln -f /bin/sh /bin/sh.real \

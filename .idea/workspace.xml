@@ -30,9 +30,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="5ae5051e-e619-416d-b0bc-4c8f992f639b" />
-  </component>
   <component name="ProjectId" id="1kWK6zdg3slmV3LgWD2AF2g3R3u" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -156,7 +153,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606233768042</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated directory structure.">
+      <created>1606236870470</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1606236870470</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Updated directory structure.">
+      <created>1606236973116</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1606236973116</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,10 +187,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Updated directory structure." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="150" y="137" key="CommitChangelistDialog2" timestamp="1606233767907">
+    <state x="150" y="137" key="CommitChangelistDialog2" timestamp="1606236972990">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="150" y="137" key="CommitChangelistDialog2/0.23.1680.976@0.23.1680.976" timestamp="1606233767907" />
+    <state x="150" y="137" key="CommitChangelistDialog2/0.23.1680.976@0.23.1680.976" timestamp="1606236972990" />
     <state x="150" y="137" key="CommitChangelistDialog2/0.23.1680.977@0.23.1680.977" timestamp="1606158907016" />
     <state x="0" y="137" key="CommitChangelistDialog2/0.23.1680.978@0.23.1680.978" timestamp="1606146215296" />
     <state x="150" y="137" key="CommitChangelistDialog2/0.23.1680.979@0.23.1680.979" timestamp="1606167169887" />
@@ -212,15 +223,15 @@
     </state>
     <state width="1659" height="264" key="GridCell.Tab.0.right/0.23.1680.977@0.23.1680.977" timestamp="1605906906559" />
     <state width="1659" height="264" key="GridCell.Tab.0.right/0.23.1680.978@0.23.1680.978" timestamp="1605900745950" />
-    <state x="401" y="200" key="SettingsEditor" timestamp="1606236864240">
+    <state x="401" y="200" key="SettingsEditor" timestamp="1606239687491">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="401" y="200" key="SettingsEditor/0.23.1680.976@0.23.1680.976" timestamp="1606236864240" />
+    <state x="401" y="200" key="SettingsEditor/0.23.1680.976@0.23.1680.976" timestamp="1606239687491" />
     <state x="401" y="200" key="SettingsEditor/0.23.1680.977@0.23.1680.977" timestamp="1605903767710" />
-    <state x="262" y="301" key="Vcs.Push.Dialog.v2" timestamp="1606235187540">
-      <screen x="0" y="23" width="1680" height="977" />
+    <state x="262" y="301" key="Vcs.Push.Dialog.v2" timestamp="1606236981283">
+      <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="262" y="301" key="Vcs.Push.Dialog.v2/0.23.1680.976@0.23.1680.976" timestamp="1606233787816" />
+    <state x="262" y="301" key="Vcs.Push.Dialog.v2/0.23.1680.976@0.23.1680.976" timestamp="1606236981283" />
     <state x="262" y="301" key="Vcs.Push.Dialog.v2/0.23.1680.977@0.23.1680.977" timestamp="1606235187540" />
     <state x="262" y="301" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1606146232976" />
     <state x="262" y="302" key="Vcs.Push.Dialog.v2/0.23.1680.979@0.23.1680.979" timestamp="1606167177120" />

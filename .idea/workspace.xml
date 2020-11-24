@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbaf7cad-5f10-4792-98c7-d65ed9c962b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/wordgames.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/wordgames.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/deploy-wordgames-app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/deploy-wordgames-app.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606243767805</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated directory structure.">
+      <created>1606245865574</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1606245865574</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,10 +223,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Updated directory structure." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="150" y="137" key="CommitChangelistDialog2" timestamp="1606243767675">
+    <state x="150" y="137" key="CommitChangelistDialog2" timestamp="1606245865437">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="150" y="137" key="CommitChangelistDialog2/0.23.1680.976@0.23.1680.976" timestamp="1606243767675" />
+    <state x="150" y="137" key="CommitChangelistDialog2/0.23.1680.976@0.23.1680.976" timestamp="1606245865437" />
     <state x="150" y="137" key="CommitChangelistDialog2/0.23.1680.977@0.23.1680.977" timestamp="1606158907016" />
     <state x="0" y="137" key="CommitChangelistDialog2/0.23.1680.978@0.23.1680.978" timestamp="1606146215296" />
     <state x="150" y="137" key="CommitChangelistDialog2/0.23.1680.979@0.23.1680.979" timestamp="1606167169887" />
@@ -261,10 +268,10 @@
     </state>
     <state x="401" y="200" key="SettingsEditor/0.23.1680.976@0.23.1680.976" timestamp="1606239687491" />
     <state x="401" y="200" key="SettingsEditor/0.23.1680.977@0.23.1680.977" timestamp="1605903767710" />
-    <state x="262" y="301" key="Vcs.Push.Dialog.v2" timestamp="1606243772168">
+    <state x="262" y="301" key="Vcs.Push.Dialog.v2" timestamp="1606245871180">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
-    <state x="262" y="301" key="Vcs.Push.Dialog.v2/0.23.1680.976@0.23.1680.976" timestamp="1606243772168" />
+    <state x="262" y="301" key="Vcs.Push.Dialog.v2/0.23.1680.976@0.23.1680.976" timestamp="1606245871180" />
     <state x="262" y="301" key="Vcs.Push.Dialog.v2/0.23.1680.977@0.23.1680.977" timestamp="1606235187540" />
     <state x="262" y="301" key="Vcs.Push.Dialog.v2/0.23.1680.978@0.23.1680.978" timestamp="1606146232976" />
     <state x="262" y="302" key="Vcs.Push.Dialog.v2/0.23.1680.979@0.23.1680.979" timestamp="1606167177120" />

@@ -20,6 +20,7 @@ spec:
         image: ghcr.io/raymondsuarez/wordgames:latest
         ports:
         - containerPort: 8003
+      terminationGracePeriodSeconds: 30
 
 
 ---

@@ -35,4 +35,4 @@ jobs:
         run: docker push ghcr.io/raymondsuarez/wordgames
 
       - name: Push New Image to Cluster
-        run: kubectl apply -f build/deploy-wordgames-latest-pod.yaml
+        run: kubectl apply -f build/deploy-wordgames-app.yaml

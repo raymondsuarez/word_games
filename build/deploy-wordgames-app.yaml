@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: wordgames
-        image: ghcr.io/raymondsuarez/wordgames:v4
+        image: ghcr.io/raymondsuarez/wordgames:latest
         ports:
         - containerPort: 8003
 

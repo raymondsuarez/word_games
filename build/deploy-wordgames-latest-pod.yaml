@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: wordgames 
+  namespace: wordgames-app
+  labels:
+    app: wordgames 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordgames 
+  template:
+    metadata:
+      labels:
+        app: wordgames
+    spec:
+      containers:
+      - name: wordgames
+        image: ghcr.io/raymondsuarez/wordgames:latest
+        ports:
+        - containerPort: 8003
+

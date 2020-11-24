@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: wordgames 
+  namespace: wordgames-app
+  labels:
+    app: wordgames 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordgames 
+  template:
+    metadata:
+      labels:
+        app: wordgames
+    spec:
+      containers:
+      - name: wordgames
+        image: ghcr.io/raymondsuarez/wordgames:v4
+        ports:
+        - containerPort: 8003
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordgames
+  namespace: wordgames-app
+spec:
+  type: ClusterIP 
+  selector:
+    app: wordgames
+  ports:
+    - name: wordgames
+      port: 80
+      targetPort: 8003
+      protocol: TCP
+    - name: https
+      port: 443
+      targetPort: 443
+      protocol: TCP
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress 
+metadata:
+   name: wordgames
+   annotations:
+     kubernetes.io/ingress.class: "nginx"
+     nginx.ingress.kubernetes.io/add-base-url: "true" 
+#     nginx.ingress.kubernetes.io/rewrite-target: /
+#     nginx.ingress.kubernetes.io/app-root: /
+     cert-manager.io/cluster-issuer: "letsencrypt-staging"
+   namespace: wordgames-app 
+spec:
+   tls:
+#     - hosts:
+#         - "rpi.local"
+     - secretName: nginx-nginx-ingress-token-xzbsz 
+   rules:
+#     - host: "rpi.local" 
+      -  http:
+           paths:
+           - backend: 
+               service:
+                 name: wordgames
+                 port:
+                    number: 8003
+             pathType: Prefix 
+             path: /
+#           - backend:
+#               service:
+#                 name: wordgames
+#                 port:
+#                   number: 8003
+#             pathType: Prefix
+#             path: /* 

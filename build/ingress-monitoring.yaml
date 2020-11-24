@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress 
+metadata:
+   name: monitoring 
+   annotations:
+     kubernetes.io/ingress.class: nginx 
+     nginx.ingress.kubernetes.io/rewrite-target: /
+   namespace: monitoring
+spec:
+   tls:
+   - hosts:
+     - grafana.rpi.local
+     - prometheus.rpi.local
+     secretName: nginx-nginx-ingress-token-xzbsz 
+   rules:
+   - host: grafana.rpi.local 
+     http:
+       paths:
+       - path: /
+         pathType: Prefix
+         backend: 
+           service:
+             name: grafana
+             port: 
+                number: 3000
+   - host: prometheus.rpi.local
+     http:
+        paths:
+        - path: /
+          pathType: Exact
+          backend:
+            service:
+               name: prometheus-k8s 
+               port: 
+                  number: 9090

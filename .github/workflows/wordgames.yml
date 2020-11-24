@@ -22,19 +22,19 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         
-      - name: DockerLogin
+      - name: Login into container repository
         run: echo $PAT | docker login ghcr.io --username raymondsuarez --password-stdin
         env:
                      PAT: ${{ secrets.PAT }}  
 
-      # DOCKER_USER: ${{ secrets.DOCKER_USER }}  
-      # DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  :  
-
         
-      - name: DockerBuild 
+      - name: Build new container
         run: |
           docker build -f build/Dockerfile -t wordgames .
-          docker tag wordgames:latest ghcr.io/raymondsuarez/wordgames:v5
+          docker tag wordgames:latest ghcr.io/raymondsuarez/wordgames:latest
 
-      - name: DockerPush
+      - name: Push Container to github container repository
         run: docker push ghcr.io/raymondsuarez/wordgames
+
+      - name: Push New Image to Cluster
+        run: kubectl apply -f build/deploy-wordgames-latest-pod.yaml

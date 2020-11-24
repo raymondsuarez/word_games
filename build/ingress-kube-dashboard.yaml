@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress 
+metadata:
+   name: kube-dashboard 
+   annotations:
+     kubernetes.io/ingress.class: nginx 
+     nginx.ingress.kubernetes.io/rewrite-target: /
+   namespace: kubernetes-dashboard
+spec:
+   tls:
+   - hosts:
+     - kube-dashboard.rpi.local
+     secretName: nginx-nginx-ingress-token-xzbsz 
+   rules:
+   - host: kube-dashboard.rpi.local 
+     http:
+       paths:
+       - path: /
+         pathType: Prefix
+         backend:
+           service:
+             name: kubernetes-dashboard
+             port: 
+                number: 443 

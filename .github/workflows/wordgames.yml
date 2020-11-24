@@ -15,8 +15,6 @@ jobs:
     # The type of runner that the job will run on
     runs-on: self-hosted
 
-
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -26,8 +24,6 @@ jobs:
         run: echo $PAT | docker login ghcr.io --username raymondsuarez --password-stdin
         env:
                      PAT: ${{ secrets.PAT }}  
-
-
 
       - name: Build new container
         run: |

@@ -14,6 +14,7 @@ app.logger.setLevel(DEBUG)
 feedbacks = []
 
 @app.route('/')
+@app.route('/wordgames')
 @app.route('/index')
 def index():
 	return render_template('index.html')

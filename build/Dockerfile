@@ -6,8 +6,8 @@ WORKDIR /word_games
 COPY . .
 COPY templates templates
 COPY static static
-COPY static/css static/css
-COPY static/js static/js
+COPY static/wordgames/css static/wordgames/css
+COPY static/wordgames/js static/wordgames/js
 
 RUN apk add --update \
                 less \

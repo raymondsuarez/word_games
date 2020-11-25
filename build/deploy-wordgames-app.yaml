@@ -73,7 +73,7 @@ spec:
                  port:
                     number: 8003
              pathType: Prefix 
-             path: /
+             path: /wordgames
 #           - backend:
 #               service:
 #                 name: wordgames

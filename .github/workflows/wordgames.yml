@@ -36,5 +36,5 @@ jobs:
 
       - name: Push New Image to Cluster
         run: |
-          # kubectl delete -f build/deploy-wordgames-app.yaml
+          kubectl delete -f build/deploy-wordgames-app.yaml
           kubectl apply -f build/deploy-wordgames-app.yaml

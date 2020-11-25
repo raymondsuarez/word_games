@@ -36,7 +36,7 @@ jobs:
 
       - name: Push New Image to Cluster
         run: |
-          kubectl get pods -o jsonpath="{.items[*].metadata.name}" -n wordgames-app |\
+          kubectl get pods -n wordgames-app -o jsonpath="{.items[*].metadata.name}"  |\
           tr " " "\n" |\
-          xargs -i -P 0 kubectl delete pods {} -n wordgames-app\
+          xargs -i -P 0 kubectl delete pods -n wordgames-app {}
           kubectl apply -f build/deploy-wordgames-latest-pod.yaml

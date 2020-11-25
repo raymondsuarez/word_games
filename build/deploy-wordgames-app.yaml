@@ -88,4 +88,18 @@ spec:
                    number: 8003
              pathType: Prefix
              path: /static/wordgames/js
+           - backend:
+               service:
+                 name: wordgames
+                 port:
+                   number: 8003
+             pathType: Prefix
+             path: /scrabble2
+           - backend:
+               service:
+                 name: wordgames
+                 port:
+                   number: 8003
+             pathType: Prefix
+             path: /nyspellbee
 

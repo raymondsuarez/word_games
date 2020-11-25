@@ -74,10 +74,18 @@ spec:
                     number: 8003
              pathType: Prefix 
              path: /wordgames
-#           - backend:
-#               service:
-#                 name: wordgames
-#                 port:
-#                   number: 8003
-#             pathType: Prefix
-#             path: /* 
+           - backend:
+               service:
+                 name: wordgames
+                 port:
+                   number: 8003
+             pathType: Prefix
+             path: /static/wordgames/css
+           - backend:
+               service:
+                 name: wordgames
+                 port:
+                   number: 8003
+             pathType: Prefix
+             path: /static/wordgames/js
+

@@ -55,17 +55,14 @@ metadata:
    namespace: nginx-app 
 spec:
    tls:
-   - hosts:
-     - "nginx.rpi.local"
-     secretName: nginx-nginx-ingress-token-xzbsz 
+     secretName: nginx-nginx-ingress-token-xzbsz
    rules:
-     - host: "nginx.rpi.local" 
-       http:
-         paths:
-         - path: /
-           pathType: Prefix 
-           backend: 
-              service:
-                 name: nginx
-                 port:
-                   number: 80 
+     http:
+       paths:
+       - path: /nginx
+         pathType: Prefix
+         backend:
+            service:
+               name: nginx
+               port:
+                 number: 80

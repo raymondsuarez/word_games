@@ -8,14 +8,11 @@ metadata:
    namespace: kubernetes-dashboard
 spec:
    tls:
-   - hosts:
-     - kube-dashboard.rpi.local
-     secretName: nginx-nginx-ingress-token-xzbsz 
+     secretName: nginx-nginx-ingress-token-xzbsz
    rules:
-   - host: kube-dashboard.rpi.local 
      http:
        paths:
-       - path: /
+       - path: /kube-dashboard
          pathType: Prefix
          backend:
            service:

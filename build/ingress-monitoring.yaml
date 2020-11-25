@@ -8,26 +8,21 @@ metadata:
    namespace: monitoring
 spec:
    tls:
-   - hosts:
-     - grafana.rpi.local
-     - prometheus.rpi.local
-     secretName: nginx-nginx-ingress-token-xzbsz 
+     secretName: nginx-nginx-ingress-token-xzbsz
    rules:
-   - host: grafana.rpi.local 
-     http:
-       paths:
-       - path: /
-         pathType: Prefix
-         backend: 
-           service:
-             name: grafana
-             port: 
-                number: 3000
-   - host: prometheus.rpi.local
-     http:
+    - http:
         paths:
         - path: /
-          pathType: Exact
+          pathType: Prefix
+          backend:
+            service:
+              name: grafana
+              port:
+                 number: 3000
+    - http:
+        paths:
+        - path: /prometheus
+          pathType: Prefix
           backend:
             service:
                name: prometheus-k8s 

@@ -25,7 +25,7 @@ def scrabble():
 	if request.method == "POST":
 		rack = request.form['letters']
 		word_filter = request.form['filter']
-		sorted_results = ScrabbleMain(rack, word_filter)
+		sorted_results = ScrabbleMain(rack.lower(), word_filter)
 	return render_template("scrabble2.html", form=form, columns=['Words'], sorted_results=sorted_results)
 
 
@@ -36,7 +36,7 @@ def spellbee():
 	if request.method == "POST":
 		required_letter = request.form['required']
 		other_letters = request.form['other']
-		sorted_results_list = SpellBeeMain(required_letter, other_letters)
+		sorted_results_list = SpellBeeMain(required_letter.lower(), other_letters.lower())
 	return render_template("nyspellbee.html", form=form, columns=['Words'], sorted_results=sorted_results_list)
 
 
